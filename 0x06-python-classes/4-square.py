@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+
+"""
+File 4-square
+Defines a class Square, with private size and public area attributes
+Can access and update size
+"""
+
+
 class Square:
     """ A class that defines a square by its side size
     """
