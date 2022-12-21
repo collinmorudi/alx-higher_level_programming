@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+File 3-square
+Defines class Square with private attribute size and public attribute area
+"""
+
+
 class Square:
     """ A class that defines a square by its side size
     """
