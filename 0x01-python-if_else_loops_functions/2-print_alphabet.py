@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-counter = 97
 
-while counter <= 122:
-    print(chr(counter), end="")
-    counter += 1
+for c in range(ord("a"), ord("z") + 1):
+    print(f"{chr(c)}", end="")
