@@ -3,7 +3,8 @@
 import hidden_4 as hd
 
 if __name__ == "__main__":
-    names_list = dir(hd)[-3:]
+    names_list = dir(hd)
 
     for name in names_list:
-        print(name)
+        if not name.startswith("__"):
+            print(name)
