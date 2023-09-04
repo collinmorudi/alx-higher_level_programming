@@ -71,6 +71,8 @@ class Rectangle:
         """Return a string representation of the rectangle with # signs"""
         rec = ""
 
+        if self.__width == 0 or self.__height == 0:
+            return rec
         for i in range(self.__height):
             for j in range(self.__width):
                 rec += "#"
