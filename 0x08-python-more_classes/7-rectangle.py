@@ -75,14 +75,11 @@ class Rectangle:
 
     def __str__(self):
         """Return a string representation of the rectangle with # signs"""
-        rec = ""
 
         if self.__width == 0 or self.__height == 0:
-            return rec
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rec += str(self.print_symbol)
-            rec += "\n"
+            return ""
+        rec = "\n".join([str(self.print_symbol) * self.__width
+                        for i in range(self.__height)])
         return rec
 
     def __repr__(self):

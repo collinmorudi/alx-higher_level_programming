@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module 4-rectangle
+Module 3-rectangle
 
 Rectangle class with pivate attributes width and height
 """
@@ -23,8 +23,7 @@ class Rectangle:
         height(self, value)
         area(self)
         perimeter(self)
-        __str__(seilf)
-        __repr__(self)
+        __str__(self)
     """
 
     def __init__(self, width=0, height=0):
@@ -66,20 +65,18 @@ class Rectangle:
 
     def perimeter(self):
         """Return perimeter of the rectangle"""
+        if self.width == 0 or self.height == 0:
+            return 0
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """Return a string representation of the rectangle with # signs"""
-        rec = ""
 
         if self.__width == 0 or self.__height == 0:
-            return rec
-        for i in range(self.__height):
-            for j in range(self.__width):
-                rec += "#"
-            rec += "\n"
+            return ""
+        rec = "\n".join(["#" * self.__width for i in range(self.__height)])
         return rec
 
     def __repr__(self):
-        """Return a string representation of the rectangle class"""
-        return f"Rectangle({self.__width}, {self.__height})"
+        """ String representation to recreate new instance """
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
