@@ -1,7 +1,9 @@
 #!/usr/bin/node
 
-if (process[3] === typeof('Number') {
-  console.log(`My number: ${process.argv[3]}`);
+const arg = parseInt(process.argv[2]);
+
+if (!isNaN(arg)) {
+  console.log(`My number: ${arg}`);
 } else {
   console.log('Not a number');
 }
